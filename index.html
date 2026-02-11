@@ -4,22 +4,112 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Product List With Cart</title>
+    <style>
+      main {
+        display: flex;
+        gap: 2rem;
+        padding: 40px;
+        font-family: 'Red Hat Text', sans-serif;
+      }
+      #products {
+        flex: 3;
+      }
+      #cart {
+        flex: 1;
+      }
+      #desserts-list{
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+      .dessert-item{
+        max-width: 30%;
+      }
+      .dessert-item img{
+        width: 100%;
+      }
+      .add-to-cart-btn{
+        position: relative;
+        top: -20px;
+        padding: 10px 20px;
+        background-color: #c9c6c7;
+        border: 1px solid #f06593;
+        border-radius: 20px;
+        cursor: pointer;
+        display: block;
+        width: fit-content;
+        margin: 0 auto;
+      }
+      .category{
+        font-size: 0.8rem;
+        color: #dc698f;
+      }
+      #confirm-order{
+        padding: 10px 20px;
+        background-color: #5a0404;
+        border: 1px solid #da3a3a;
+        border-radius: 20px;
+        cursor: pointer;
+        color: white;
+      }
+      .carbon-neutral{
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        font-size: 0.8rem;
+        color: #4caf50;
+        background-color: #f2f6f2;
+        border: 0.5px solid #dde8dd;
+        box-shadow: #c9c6c7 0px 1px 3px;
+        border-radius: 4px;
+      }
+      #cart{
+        background-color: #f9f9f9;
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: #c9c6c7 0px 1px 3px;
+        height: fit-content
+      }
+      #cart-list{
+        list-style: none;
+        padding: 0;
+      }
+      .cart-item{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0;
+        border-bottom: 0.5px solid #c9c6c7;
+        margin-bottom: 10px;
+      }
+
+    </style>
   </head>
   <body>
+    <main>
     <section id="products">
       <h1>Desserts</h1>
       <ul id="desserts-list"></ul>
     </section>
     <section id="cart">
-      <h2>Your Cart <span id="cart-count">0</span></h2>
+      <h2>Your Cart (<span id="cart-count">0</span>)</h2>
       <ul id="cart-list"></ul>
       <p>
         <span>Order Total:</span>
-        <span id="order-total">$6.50</span>
+        <span id="order-total">Ksh 0.00</span>
       </p>
+      <!--<p class="carbon-neutral"><img src="assets/images/icon-carbon-neutral.svg" alt="carbon neutral">This is a carbon neutral delivery</p>-->
       <button id="confirm-order">Confirm Order</button>
     </section>
+    </main>
 
     <script src="script.js"></script>
   </body>
 </html>
+
+<!--fetch -->
+<!--use a currency API on this app-->
+
+
