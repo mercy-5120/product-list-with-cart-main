@@ -118,11 +118,6 @@ const products = [
 
 // Function to load products with real-time exchange rate
 async function loadProductsWithExchangeRate() {
-  const dessertsContainer = document.querySelector("#desserts-list");
-
-  // Clear existing content (if any)
-  dessertsContainer.innerHTML = "";
-
   try {
     // Fetch exchange rate from API
     const response = await fetch(
